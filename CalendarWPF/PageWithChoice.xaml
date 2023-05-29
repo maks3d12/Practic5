@@ -1,0 +1,27 @@
+﻿<Page x:Class="CalendarWPF.PageWithChoice"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CalendarWPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="650"
+      Title="PageWithChoice">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="0.2*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="0.3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Name="back" Margin="10" Content="назад" FontSize="20" Click="back_Click" ></Button>
+        <TextBlock Name="TB_With_date" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Center" Text="Выбирите занятие на день"   FontSize="25"></TextBlock>
+        <ListView Name="list" Grid.Row="1"  Grid.ColumnSpan="3"></ListView>
+        <Button Name="Save" Grid.Row="2" Grid.ColumnSpan="3" Content="Сохранить и выйти" FontSize="20" Click="Save_Click" ></Button>
+    </Grid>
+</Page>
